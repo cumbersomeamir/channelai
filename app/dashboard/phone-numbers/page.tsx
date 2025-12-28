@@ -57,14 +57,14 @@ export default function PhoneNumbersPage() {
             {availableNumbers.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-6 flex items-center justify-between"
+                className="bg-white border border-gray-200 rounded-lg p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
               >
-                <div>
-                  <div className="text-xl font-semibold text-gray-900 mb-1">{item.number}</div>
+                <div className="flex-1">
+                  <div className="text-lg md:text-xl font-semibold text-gray-900 mb-1">{item.number}</div>
                   <div className="text-sm text-gray-600">{item.location}</div>
                   <div className="text-sm font-medium text-gray-900 mt-1">{item.price}</div>
                 </div>
-                <button className="bg-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                <button className="w-full sm:w-auto bg-purple-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-purple-700 transition-colors text-sm md:text-base">
                   PURCHASE
                 </button>
               </div>

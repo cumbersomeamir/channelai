@@ -102,25 +102,25 @@ export default function VoicesPage() {
         {voices.map((voice, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-lg p-6 flex items-center justify-between hover:shadow-md transition-shadow"
+            className="bg-white border border-gray-200 rounded-lg p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:shadow-md transition-shadow"
           >
-            <div className="flex items-center gap-4 flex-1">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400"></div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-semibold text-gray-900">{voice.name}</h3>
-                  <span className="text-sm text-gray-600">({voice.gender})</span>
+            <div className="flex items-start sm:items-center gap-3 md:gap-4 flex-1 w-full sm:w-auto">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex-shrink-0"></div>
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">{voice.name}</h3>
+                  <span className="text-xs md:text-sm text-gray-600">({voice.gender})</span>
                 </div>
-                <p className="text-sm text-gray-600 mb-2">{voice.description}</p>
+                <p className="text-xs md:text-sm text-gray-600 mb-2 line-clamp-2">{voice.description}</p>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-yellow-500">★</span>
-                  <span className="text-sm font-medium text-gray-900">{voice.rating}</span>
+                  <span className="text-yellow-500 text-sm">★</span>
+                  <span className="text-xs md:text-sm font-medium text-gray-900">{voice.rating}</span>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {voice.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                      className="px-2 py-0.5 md:py-1 bg-gray-100 text-gray-700 text-xs rounded"
                     >
                       {tag}
                     </span>
@@ -128,12 +128,12 @@ export default function VoicesPage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
-                <Copy className="w-5 h-5 text-gray-600" />
+            <div className="flex items-center gap-3 md:gap-4 w-full sm:w-auto justify-end">
+              <button className="p-2 hover:bg-gray-100 rounded-lg touch-manipulation">
+                <Copy className="w-4 h-4 md:w-5 md:h-5 text-gray-600" />
               </button>
-              <button className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-                <Play className="w-4 h-4" />
+              <button className="flex items-center gap-2 bg-gray-900 text-white px-3 md:px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs md:text-sm touch-manipulation">
+                <Play className="w-3 h-3 md:w-4 md:h-4" />
                 Play
               </button>
             </div>

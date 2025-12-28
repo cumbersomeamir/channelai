@@ -70,11 +70,11 @@ export default function CallLogsPage() {
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto">
-      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Call Logs</h1>
+    <div className="p-4 md:p-8 max-w-7xl mx-auto">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Call Logs</h1>
 
-      <div className="mb-6">
-        <div className="flex items-center gap-4 border-b border-gray-200">
+      <div className="mb-4 md:mb-6">
+        <div className="flex items-center gap-2 md:gap-4 border-b border-gray-200 overflow-x-auto">
           <button
             onClick={() => setActiveTab('completed')}
             className={`px-4 py-2 font-medium text-sm ${
@@ -118,7 +118,8 @@ export default function CallLogsPage() {
       </div>
 
       <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-        <div className="overflow-x-auto">
+        {/* Desktop Table View */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full min-w-[800px]">
             <thead className="bg-gray-50">
               <tr>
@@ -184,6 +185,53 @@ export default function CallLogsPage() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card View */}
+        <div className="md:hidden divide-y divide-gray-200">
+          {calls.map((call) => (
+            <div key={call.id} className="p-4 space-y-3">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-sm font-medium text-gray-900">{call.id}</span>
+                    <Copy className="w-4 h-4 text-gray-400 cursor-pointer" />
+                  </div>
+                  <div className="text-xs text-gray-500">{call.date}</div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button className="p-2 hover:bg-gray-100 rounded">
+                    <Play className="w-4 h-4 text-gray-600" />
+                  </button>
+                  <button className="p-2 hover:bg-gray-100 rounded">
+                    <Download className="w-4 h-4 text-gray-600" />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <div className="text-xs text-gray-500 mb-1">TO</div>
+                  <div className="text-gray-900">{call.to}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-500 mb-1">FROM</div>
+                  <div className="text-gray-900">{call.from}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-500 mb-1">DURATION</div>
+                  <div className="text-gray-900">{call.duration || '-'}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-gray-500 mb-1">STATUS</div>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${call.statusColor}`}></div>
+                    <span className="text-gray-900">{call.status}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

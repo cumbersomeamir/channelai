@@ -46,16 +46,17 @@ export default function SMSPage() {
         </button>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-12 text-center">
-        <MessageSquare className="w-24 h-24 mx-auto mb-6 text-gray-400" />
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">No SMS Conversations Found</h2>
-        <p className="text-gray-600 mb-6">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-12 text-center">
+        <MessageSquare className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 text-gray-400" />
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">No SMS Conversations Found</h2>
+        <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
           You don&apos;t have any SMS conversations yet. Configure a phone number with SMS capabilities to
           get started.
         </p>
-        <button className="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors mx-auto">
-          <Settings className="w-5 h-5" />
-          Upgrade to Enterprise to configure SMS for Phone Numbers
+        <button className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors mx-auto text-sm md:text-base touch-manipulation">
+          <Settings className="w-4 h-4 md:w-5 md:h-5" />
+          <span className="hidden sm:inline">Upgrade to Enterprise to configure SMS for Phone Numbers</span>
+          <span className="sm:hidden">Upgrade to Enterprise</span>
         </button>
       </div>
     </div>

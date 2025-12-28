@@ -47,21 +47,21 @@ export default function ToolsPage() {
 
       <div className="mb-8">
         <h2 className="text-sm font-semibold text-gray-700 uppercase mb-4">QUICK ACTIONS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="border-2 border-yellow-400 rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Plus className="w-8 h-8 mb-4 text-gray-900" />
-            <h3 className="font-semibold text-gray-900 mb-2">New Tool</h3>
-            <p className="text-sm text-gray-600">Create a new custom or integration-based tool</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+          <div className="border-2 border-yellow-400 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Plus className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-900" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">New Tool</h3>
+            <p className="text-xs md:text-sm text-gray-600">Create a new custom or integration-based tool</p>
           </div>
-          <div className="border border-gray-200 rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Grid className="w-8 h-8 mb-4 text-gray-600" />
-            <h3 className="font-semibold text-gray-900 mb-2">Explore Integrations</h3>
-            <p className="text-sm text-gray-600">Browse available integrations to build tools with</p>
+          <div className="border border-gray-200 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Grid className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-600" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Explore Integrations</h3>
+            <p className="text-xs md:text-sm text-gray-600">Browse available integrations to build tools with</p>
           </div>
-          <div className="border border-gray-200 rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Folder className="w-8 h-8 mb-4 text-gray-600" />
-            <h3 className="font-semibold text-gray-900 mb-2">Legacy Tools</h3>
-            <p className="text-sm text-gray-600">View all tools in the old tools page</p>
+          <div className="border border-gray-200 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Folder className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-600" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Legacy Tools</h3>
+            <p className="text-xs md:text-sm text-gray-600">View all tools in the old tools page</p>
           </div>
         </div>
       </div>

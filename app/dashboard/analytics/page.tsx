@@ -21,8 +21,8 @@ export default function AnalyticsPage() {
     <div className="p-4 md:p-8 max-w-7xl mx-auto">
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Analytics</h1>
 
-      <div className="mb-6">
-        <div className="flex items-center gap-4 border-b border-gray-200">
+      <div className="mb-4 md:mb-6">
+        <div className="flex items-center gap-2 md:gap-4 border-b border-gray-200 overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -69,12 +69,12 @@ export default function AnalyticsPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 mb-6 md:mb-8">
         {metrics.map((metric) => (
-          <div key={metric.label} className="bg-white border border-gray-200 rounded-lg p-4">
-            <div className="text-sm text-gray-600 mb-1">{metric.label}</div>
-            <div className="text-2xl font-bold text-gray-900 mb-1">{metric.value}</div>
-            <div className="text-sm text-gray-500">→ {metric.change}</div>
+          <div key={metric.label} className="bg-white border border-gray-200 rounded-lg p-3 md:p-4">
+            <div className="text-xs md:text-sm text-gray-600 mb-1">{metric.label}</div>
+            <div className="text-lg md:text-2xl font-bold text-gray-900 mb-1">{metric.value}</div>
+            <div className="text-xs md:text-sm text-gray-500">→ {metric.change}</div>
           </div>
         ))}
       </div>

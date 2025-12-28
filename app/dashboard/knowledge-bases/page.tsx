@@ -79,17 +79,17 @@ export default function KnowledgeBasesPage() {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-12 text-center mb-8">
-        <Clock className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-        <h3 className="text-lg font-medium text-gray-900 mb-2">No analytics data yet</h3>
-        <p className="text-gray-600">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-12 text-center mb-6 md:mb-8">
+        <Clock className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-gray-400" />
+        <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2">No analytics data yet</h3>
+        <p className="text-sm md:text-base text-gray-600">
           Analytics will appear once your knowledge base starts receiving queries.
         </p>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <div className="flex items-center gap-3 mb-4">
-          <h2 className="text-lg font-semibold text-gray-900">Learning Opportunities</h2>
+      <div className="bg-white border border-gray-200 rounded-lg p-4 md:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 md:gap-3 mb-4">
+          <h2 className="text-base md:text-lg font-semibold text-gray-900">Learning Opportunities</h2>
           <span className="px-3 py-1 bg-orange-500 text-white text-xs font-medium rounded-full">
             BETA
           </span>
@@ -109,27 +109,27 @@ export default function KnowledgeBasesPage() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2 md:gap-4 flex-wrap">
-            <select className="px-4 py-2 border border-gray-300 rounded-lg text-sm">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 md:gap-4 w-full md:w-auto">
+            <select className="px-3 md:px-4 py-2 border border-gray-300 rounded-lg text-sm touch-manipulation">
               <option>Filter: All Knowledge Bases</option>
             </select>
-            <select className="px-4 py-2 border border-gray-300 rounded-lg text-sm">
+            <select className="px-3 md:px-4 py-2 border border-gray-300 rounded-lg text-sm touch-manipulation">
               <option>Sort: Most Recent</option>
             </select>
           </div>
         </div>
 
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
-          <BookOpen className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8 text-center">
+          <BookOpen className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-gray-400" />
+          <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2">
             Great news! Your agent has answers for everything asked so far.
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 max-w-2xl mx-auto">
             Learning Opportunities appear when your agent encounters questions it can&apos;t answer. These
             become chances to strengthen your knowledge base and ensure your agent has the right
             information to help customers.
           </p>
-          <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-colors">
+          <button className="bg-yellow-500 text-white px-4 md:px-6 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-colors text-sm md:text-base touch-manipulation">
             Learn More
           </button>
         </div>

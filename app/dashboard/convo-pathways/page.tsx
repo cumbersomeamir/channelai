@@ -50,26 +50,26 @@ export default function ConversationalPathwaysPage() {
 
       <div className="mb-8">
         <h2 className="text-sm font-semibold text-gray-700 uppercase mb-4">QUICK ACTIONS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="border-2 border-black rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Sparkles className="w-8 h-8 mb-4 text-gray-900" />
-            <h3 className="font-semibold text-gray-900 mb-2">Create a Pathway</h3>
-            <p className="text-sm text-gray-600">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
+          <div className="border-2 border-black rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Sparkles className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-900" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Create a Pathway</h3>
+            <p className="text-xs md:text-sm text-gray-600">
               Build a new conversational pathway from scratch or generate one from audio, JSON, or a
               use case
             </p>
           </div>
-          <div className="border border-gray-200 rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Car className="w-8 h-8 mb-4 text-gray-600" />
-            <h3 className="font-semibold text-gray-900 mb-2">Start with a Template</h3>
-            <p className="text-sm text-gray-600">
+          <div className="border border-gray-200 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Car className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-600" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Start with a Template</h3>
+            <p className="text-xs md:text-sm text-gray-600">
               Duplicate our production-ready Car Rental template to see a complete pathway in action
             </p>
           </div>
-          <div className="border border-gray-200 rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors">
-            <Globe className="w-8 h-8 mb-4 text-gray-600" />
-            <h3 className="font-semibold text-gray-900 mb-2">Pathway Showcase</h3>
-            <p className="text-sm text-gray-600">
+          <div className="border border-gray-200 rounded-lg p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors touch-manipulation">
+            <Globe className="w-6 h-6 md:w-8 md:h-8 mb-3 md:mb-4 text-gray-600" />
+            <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Pathway Showcase</h3>
+            <p className="text-xs md:text-sm text-gray-600">
               Explore community pathways and gain inspiration from real-world implementations
             </p>
           </div>

@@ -114,7 +114,7 @@ export default function BillingPage() {
             </p>
           </div>
 
-          <div className="overflow-x-auto -mx-4 md:mx-0">
+          <div className="overflow-x-auto -mx-4 md:mx-0 pb-4">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 min-w-[1000px] px-4 md:px-0">
               {plans.map((plan) => (
                 <div
@@ -163,11 +163,11 @@ export default function BillingPage() {
                     </div>
                   </div>
                   {plan.current ? (
-                    <button className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">
+                    <button className="w-full mt-4 px-4 py-2.5 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 touch-manipulation">
                       Cancel Plan
                     </button>
                   ) : (
-                    <button className="w-full mt-4 px-4 py-2 bg-black text-white rounded-lg text-sm hover:bg-gray-800">
+                    <button className="w-full mt-4 px-4 py-2.5 bg-black text-white rounded-lg text-sm hover:bg-gray-800 touch-manipulation">
                       {plan.price === 'Contact Us' ? 'Contact Us' : 'Upgrade'}
                     </button>
                   )}

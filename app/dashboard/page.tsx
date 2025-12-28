@@ -78,9 +78,10 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4 md:p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Call Logs</h2>
-            <div className="overflow-x-auto">
+            {/* Desktop Table */}
+            <div className="hidden md:block overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200">
@@ -113,15 +114,42 @@ export default function DashboardPage() {
                 </tbody>
               </table>
             </div>
+            {/* Mobile Card View */}
+            <div className="md:hidden space-y-3">
+              {callLogs.map((call, idx) => (
+                <div key={idx} className="border border-gray-200 rounded-lg p-3 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-gray-500">{call.id}</span>
+                    <span className="text-xs text-gray-500">{call.date}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div>
+                      <span className="text-gray-500">TO: </span>
+                      <span className="text-gray-900">{call.to}</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-500">FROM: </span>
+                      <span className="text-gray-900">{call.from}</span>
+                    </div>
+                  </div>
+                  {call.duration && (
+                    <div className="text-sm">
+                      <span className="text-gray-500">Duration: </span>
+                      <span className="text-gray-900">{call.duration}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         <div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="bg-white border border-gray-200 rounded-lg p-4 md:p-6">
+            <h2 className="text-base md:text-lg font-semibold text-gray-900 mb-4">
               One-click shortcuts to your essential tools.
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {shortcuts.map((shortcut, index) => (
                 <div
                   key={index}
@@ -141,11 +169,11 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="flex gap-4 mb-6">
-        <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6">
+        <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors text-sm md:text-base">
           Build Pathway
         </button>
-        <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+        <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors text-sm md:text-base">
           Send Call
         </button>
       </div>

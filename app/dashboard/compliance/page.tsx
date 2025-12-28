@@ -19,16 +19,17 @@ export default function CompliancePage() {
       </div>
 
       <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-            <span className="text-blue-600 font-bold">i</span>
+        <div className="flex items-start md:items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+            <span className="text-blue-600 font-bold text-sm">i</span>
           </div>
-          <p className="text-gray-700">
+          <p className="text-sm md:text-base text-gray-700">
             Guard rails are applied on individual pathways, personas, or numbers.
           </p>
         </div>
-        <button className="flex items-center gap-2 bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-colors">
-          Learn how to apply guard rails
+        <button className="flex items-center justify-center gap-2 bg-yellow-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-colors text-sm md:text-base touch-manipulation w-full md:w-auto">
+          <span className="hidden sm:inline">Learn how to apply guard rails</span>
+          <span className="sm:hidden">Learn more</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>

@@ -151,11 +151,11 @@ await axios.post('https://api.channel.ai/v1/calls', data, {headers});`;
         </div>
       </div>
 
-      <div className="hidden md:block w-full md:w-96 bg-gray-900 text-gray-100 p-6 overflow-y-auto border-t md:border-l border-gray-700">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-4">
-            <button className="text-sm text-gray-400 hover:text-gray-200">Read Docs</button>
-            <button className="text-sm text-gray-400 hover:text-gray-200 border-b border-gray-400">
+      <div className="w-full md:w-96 bg-gray-900 text-gray-100 p-4 md:p-6 overflow-y-auto border-t md:border-l border-gray-700">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-3 md:gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
+            <button className="text-xs md:text-sm text-gray-400 hover:text-gray-200">Read Docs</button>
+            <button className="text-xs md:text-sm text-gray-400 hover:text-gray-200 border-b border-gray-400">
               Hide code
             </button>
           </div>
@@ -177,10 +177,11 @@ await axios.post('https://api.channel.ai/v1/calls', data, {headers});`;
         </pre>
       </div>
 
-      <div className="fixed bottom-6 right-6">
-        <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center gap-2 shadow-lg">
-          <Send className="w-5 h-5" />
-          Send Call
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-10">
+        <button className="bg-black text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center gap-2 shadow-lg text-sm md:text-base">
+          <Send className="w-4 h-4 md:w-5 md:h-5" />
+          <span className="hidden sm:inline">Send Call</span>
+          <span className="sm:hidden">Send</span>
         </button>
       </div>
     </div>
